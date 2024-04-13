@@ -419,7 +419,7 @@ footer {
             position: absolute;
             top: 0;
             right: 0;
-            margin-top: 1rem;
+            margin-right: -0.5rem;
         }
     
         /* Estilos para la navegación en vista móvil */
