@@ -420,7 +420,6 @@ footer {
             top: 0;
             right: 0;
             margin-top: 1rem;
-            margin-right: 1rem;
         }
     
         /* Estilos para la navegación en vista móvil */
@@ -433,7 +432,7 @@ footer {
             grid-template-rows: auto;
             align-items: end;
             visibility: hidden;
-            margin-top: 6rem;
+            margin-top: 4.5rem;
             margin-right: 1rem;
         }
     
