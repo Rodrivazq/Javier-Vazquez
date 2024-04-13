@@ -484,18 +484,12 @@ footer {
 /* Posicionamiento relativo para un elemento, aquí 'batman' */
 .batman {
     position: relative;
+    overflow: hidden;
 }
 
 /* Estilo para la imagen dentro del contenedor 'batman', con posicionamiento absoluto */
 .batman img {
-    position: absolute; 
-    width: 150%; 
-    height: auto;
-    z-index: -1;
-    right: 0;
-    top: 10rem;
-    bottom: 0;
-    left: -10%;
+    overflow: hidden;
 }
 
 /* Estilos para texto adicional, con énfasis en color y subrayado */
