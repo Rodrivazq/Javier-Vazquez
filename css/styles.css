@@ -433,7 +433,7 @@ footer {
             grid-template-rows: auto;
             align-items: end;
             visibility: hidden;
-            margin-top: 4.5rem;
+            margin-top: 5rem;
             margin-right: 1rem;
         }
     
@@ -529,7 +529,7 @@ footer {
 /* Estilos para los títulos y textos de las páginas */
 .titulo-paginas,
 .texto-paginas {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     padding: 0;
 }
 .titulo-paginas {
