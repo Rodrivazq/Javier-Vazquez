@@ -321,17 +321,18 @@ footer {
 
 /* Texto descriptivo en los planes */
 .ulp {
-    color: rgb(177, 177, 177);
+    color: rgb(255, 255, 255);
     font-size: 1.7rem;
-    text-shadow: 1px 1px 1px #FFD700;
+    text-shadow: 2px 2px 2px #5e5000;
+    text-align: start;
 }
 
 /* Subtítulo o encabezado en los planes */
 .ph4 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     display: grid;
     margin-top: auto;
-    color: #FFD700;
+    color: #7bffa7;
     align-items: center;
 }
 
