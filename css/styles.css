@@ -619,6 +619,80 @@ footer {
     font-size: 1.2rem;
 }
 
+        /*Planes*/
+
+/* Contenedor para los planes, usando grid para la disposición */
+.plan-container {
+    display: block;
+    font-size: 1.2rem;
+    justify-content:flex-start;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    text-align: left;
+    margin-top: 3rem;
+}
+
+/* Estilos para cada plan individual */
+.plan {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    border-right: 1px solid #27ad4f;
+}
+
+/* Botón dentro de cada plan */
+.plan-button {
+    margin-top: auto;
+    padding: auto;
+    width: auto;
+    display: grid;
+    justify-content: space-around;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.plan-button:hover {
+    background-color: #EEFB03;
+    transition: 0.5s ease;
+}
+
+/* Estilos para el último plan del contenedor */
+.plan:last-child {
+    border-right: none;
+}
+
+/* Imagen dentro de cada plan */
+.plan-img {
+    width: 15%;
+    height: auto;
+}
+
+/* Título grande en los planes */
+.plbs {
+    color: #EEFB03;
+    font-size: 3.5rem;
+    margin-top: -1rem;
+}
+
+/* Texto descriptivo en los planes */
+.ulp {
+    color: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    text-shadow: 2px 2px 2px #5e5000;
+    text-align: start;
+}
+
+/* Subtítulo o encabezado en los planes */
+.ph4 {
+    font-size: 1.5em;
+    display: grid;
+    margin-top: auto;
+    color: #7bffa7;
+    align-items: center;
+}
+
         /*Contacto*/
 
 /* Estilos base para la sección de contacto */
