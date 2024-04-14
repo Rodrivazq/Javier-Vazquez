@@ -551,6 +551,73 @@ footer {
     max-height: 50vh; /* Limita la altura de la imagen a un porcentaje de la altura de la ventana */
 }
 
+/*Servicios*/
+
+.titulo-servicios {
+    font-size: 5rem;
+    left: 0;
+    right: 0;
+}
+
+.contenedor-titulo{
+    text-align: center;
+    margin-right: -1rem;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.contenedor-servicios{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.texto-servicios {
+    font-size: 1.5rem;
+    color: #EEFB03;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: -4rem;
+}
+
+/* Contenedor para la grilla de servicios, alineado al final */
+.contenedor-grid {
+    display: grid;
+    margin-right: 2rem;
+    margin-top: -6rem;
+    margin-left: 0;
+}
+
+/* Diseño de grilla para elementos de servicio, con una sola columna */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+/* Estilo para cada item de servicio, utilizando flexbox */
+.service-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para imágenes dentro de los items de servicio */
+.service-item img {
+    width: 20%;
+    margin-right: 0;
+}
+
+/* Estilo para títulos adicionales en la sección de servicios */
+.additional-title {
+    font-size: 1.6rem;
+    color: #ffee00;
+    margin: 0.3rem 0 0 0;
+}
+
+/* Estilo para párrafos en la sección de servicios */
+.p-ser {
+    font-size: 1.2rem;
+}
 
         /*Contacto*/
 
