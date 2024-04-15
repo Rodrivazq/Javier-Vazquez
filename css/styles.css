@@ -9,6 +9,10 @@ body {
     min-height: 100vh;
 }
 
+.body {
+    overflow-y: hidden;
+}
+
         /* Header*/
 
 .header {
@@ -127,10 +131,6 @@ footer {
     margin-left: 3.125rem;
 }
 
-/* Contenedor principal de la página, previene desbordamiento */
-.index-cont {
-    overflow: hidden;
-}
 
 /* Estilos para el contenedor "batman" */
 .batman {
@@ -158,12 +158,6 @@ footer {
 
         /*Proyectos*/
 
-/* Variables globales */
-:root {
-    --transition-speed: 0.3s;
-    overflow-y: auto;
-}
-
 /* Contenedor del grid */
 .grid-container {
     display: grid;
@@ -189,6 +183,11 @@ footer {
 
         /*Servicios*/
 /* Contenedor principal de servicios, con alineación y distribución */
+
+#service-body{
+    overflow-y: hidden;
+}
+
 .contenedor-servicios{
     display: flex;
     justify-content: space-between;
@@ -232,7 +231,7 @@ footer {
     display: grid;
     grid-template-columns: auto;
     margin-left: auto;
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
 /* Estilo para cada item de servicio, utilizando flexbox */
