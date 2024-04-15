@@ -604,8 +604,8 @@ footer {
 
 /* Estilo para imágenes dentro de los items de servicio */
 .service-item img {
-    width: 20%;
-    margin-right: 0;
+    width: 15%;
+    margin-right: 1rem;
 }
 
 /* Estilo para títulos adicionales en la sección de servicios */
@@ -700,4 +700,13 @@ footer {
 .contacto {
     margin-top: 3rem;
 }
+}
+
+@media screen and (max-width: 370px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+    margin-right: 2rem;
+    }
+
 }
