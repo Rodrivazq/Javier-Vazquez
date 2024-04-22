@@ -9,10 +9,6 @@ body {
     min-height: 100vh;
 }
 
-.body {
-    overflow-y: hidden;
-}
-
         /* Header*/
 
 .header {
