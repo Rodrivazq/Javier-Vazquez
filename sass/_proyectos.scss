@@ -1,0 +1,24 @@
+                /*Proyectos*/
+        
+        /* Contenedor del grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0; /* Si no quieres espacio entre las imágenes */
+            margin: 0; /* Asegúrate de que no haya margen extra */
+        
+        }
+        
+        /* Estilos de imagen en slides */
+        .slide img {
+            width: 100%;
+            height: auto; /* Asegúrate de que las imágenes se estiren verticalmente si es lo que deseas */
+            object-fit: cover; /* Cambia a contain si no quieres que las imágenes se recorten */
+            transition: transform var(--transition-speed) ease;
+        }
+        
+        /* Efecto hover en imágenes de slides */
+        .slide:hover img {
+            transform: scale(1.05);
+        }
+        

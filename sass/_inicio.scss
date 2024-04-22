@@ -1,0 +1,47 @@
+@use 'variables';
+                /* Inicio */
+        
+        /* Estilos generales para los títulos 'Javier' y 'Vázquez' */
+        .titulo-javier,
+        .titulo-vazquez {
+            margin-left: 3rem;
+        }
+        
+        /* Estilos específicos para el título 'Javier' */
+        .titulo-javier {
+            font-size: 10rem;
+            margin-left: 1.5rem;
+            margin-top: 10rem;
+        }
+        
+        /* Estilos específicos para el título 'Vázquez' */
+        .titulo-vazquez {
+            font-size: 11rem;
+            margin-left: 3.125rem;
+        }
+        
+        
+        /* Estilos para el contenedor "batman" */
+        .batman {
+            position: relative;
+        }
+        
+        /* Estilos para la imagen dentro del contenedor '.batman', posicionamiento y tamaño */
+        .batman img {
+            position: absolute;
+            width: 70vw;
+            height: auto;
+            z-index: -1; 
+            left: 50vw;
+        }
+        /* Estilos para texto adicional en la página, con tipografía específica, tamaño, color y decoración */
+        .texto-adicional {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 2rem;
+            font-weight: normal;
+            color: variables.$amarillo;
+            margin-left: 5%;
+            text-decoration: underline;
+        }
+        
+        

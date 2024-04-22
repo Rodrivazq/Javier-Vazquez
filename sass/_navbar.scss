@@ -1,0 +1,39 @@
+@use 'variables';
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    right: 0;
+    position: absolute;
+}
+
+/* Estilos para los enlaces dentro de la lista de navegación */
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5em;
+    font-size: 1.9rem;
+}
+
+.nav-list li:hover a,
+.nav-list a:hover {
+    text-decoration: underline;
+    color: variables.$amarillo;
+}
+
+/* Estilos específicos para el primer enlace de la lista de navegación */
+.nav-list li:first-child a {
+    color: variables.$amarillo;
+    margin-right: 4rem;
+}
+
+/* Estilos para los botones de menú en la versión móvil */
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+#cerrar {
+    display: none;
+}
