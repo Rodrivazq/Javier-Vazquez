@@ -1,12 +1,11 @@
-// styles.scss
 @use 'variables' as *;
 
-@keyframes pulse {
+@keyframes gradient-shift {
     0%, 100% {
-        transform: scale(1);
+        background-position: 0% 50%;
     }
     50% {
-        transform: scale(1.07);
+        background-position: 100% 50%;
     }
 }
 
@@ -35,16 +34,29 @@
 
 .plan-button {
     margin-top: auto;
-    padding: auto;
+    padding: 10px 20px;
     width: auto;
     display: grid;
     justify-content: space-around;
+    background-image: linear-gradient(to right, gold, white, gold);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 3rem;
+    animation: gradient-shift 3s ease-in-out infinite;
+    transition: transform 1s ease, background-color 0.3s ease;
 
     &:hover {
-        background-color: $amarillo;
-        transition: 0.5s ease;
+        background-color: gold; // Color dorado sólido para el fondo en hover
+        transform: scale(1.1); // Agrandar el botón
+        background-image: none; // Eliminar el gradiente para mostrar color sólido
     }
 }
+
 
 .plan-img {
     width: 15%;
