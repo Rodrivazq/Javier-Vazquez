@@ -1,0 +1,640 @@
+@charset "UTF-8";
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  right: 0;
+  position: absolute;
+}
+
+/* Estilos para los enlaces dentro de la lista de navegación */
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.5em;
+  font-size: 1.9rem;
+}
+
+.nav-list li:hover a,
+.nav-list a:hover {
+  text-decoration: underline;
+  color: #EEFB03;
+}
+
+/* Estilos específicos para el primer enlace de la lista de navegación */
+.nav-list li:first-child a {
+  color: #EEFB03;
+  margin-right: 4rem;
+}
+
+/* Estilos para los botones de menú en la versión móvil */
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+#cerrar {
+  display: none;
+}
+
+/* Inicio */
+/* Estilos generales para los títulos 'Javier' y 'Vázquez' */
+.titulo-javier,
+.titulo-vazquez {
+  margin-left: 3rem;
+}
+
+/* Estilos específicos para el título 'Javier' */
+.titulo-javier {
+  font-size: 10rem;
+  margin-left: 1.5rem;
+  margin-top: 10rem;
+}
+
+/* Estilos específicos para el título 'Vázquez' */
+.titulo-vazquez {
+  font-size: 11rem;
+  margin-left: 3.125rem;
+}
+
+/* Estilos para el contenedor "batman" */
+.batman {
+  position: relative;
+}
+
+/* Estilos para la imagen dentro del contenedor '.batman', posicionamiento y tamaño */
+.batman img {
+  position: absolute;
+  width: 70vw;
+  height: auto;
+  z-index: -1;
+  left: 50vw;
+}
+
+/* Estilos para texto adicional en la página, con tipografía específica, tamaño, color y decoración */
+.texto-adicional {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #EEFB03;
+  margin-left: 5%;
+  text-decoration: underline;
+}
+
+/*Proyectos*/
+/* Contenedor del grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0; /* Si no quieres espacio entre las imágenes */
+  margin: 0; /* Asegúrate de que no haya margen extra */
+}
+
+/* Estilos de imagen en slides */
+.slide img {
+  width: 100%;
+  height: auto; /* Asegúrate de que las imágenes se estiren verticalmente si es lo que deseas */
+  -o-object-fit: cover;
+     object-fit: cover; /* Cambia a contain si no quieres que las imágenes se recorten */
+  transition: transform var(--transition-speed) ease;
+}
+
+/* Efecto hover en imágenes de slides */
+.slide:hover img {
+  transform: scale(1.05);
+}
+
+/*Servicios*/
+/* Contenedor principal de servicios, con alineación y distribución */
+#service-body {
+  overflow-y: hidden;
+}
+
+.contenedor-servicios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilos para el contenedor del título, con márgenes ajustados */
+.contenedor-titulo {
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 15%;
+}
+
+/* Estilo del título de la sección de servicios */
+.titulo-servicios {
+  font-size: 7rem;
+  color: white;
+}
+
+/* Estilo para el texto descriptivo bajo el título de servicios */
+.texto-servicios {
+  font-size: 2rem;
+  color: #EEFB03;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: -6rem;
+}
+
+/* Contenedor para la grilla de servicios, alineado al final */
+.contenedor-grid {
+  display: flex;
+  justify-content: flex-end;
+  padding: auto;
+  margin-left: 20%;
+}
+
+/* Diseño de grilla para elementos de servicio, con una sola columna */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: auto;
+  margin-left: auto;
+  margin-top: 6rem;
+}
+
+/* Estilo para cada item de servicio, utilizando flexbox */
+.service-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para imágenes dentro de los items de servicio */
+.service-item img {
+  width: 10%;
+  margin-right: 1rem;
+}
+
+/* Estilo para títulos adicionales en la sección de servicios */
+.additional-title {
+  font-size: 3rem;
+  color: #ffee00;
+  margin: 5px 0;
+}
+
+/* Estilo para párrafos en la sección de servicios */
+.p-ser {
+  font-size: 1.6rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Planes*/
+/* Contenedor para los planes, usando grid para la disposición */
+.plan-container {
+  display: grid;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  text-align: center;
+}
+
+/* Estilos para cada plan individual */
+.plan {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-right: 1px solid #ccc;
+}
+
+/* Botón dentro de cada plan */
+.plan-button {
+  margin-top: auto;
+  padding: auto;
+  width: auto;
+  display: grid;
+  justify-content: space-around;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.plan-button:hover {
+  background-color: #EEFB03;
+  transition: 0.5s ease;
+}
+
+/* Estilos para el último plan del contenedor */
+.plan:last-child {
+  border-right: none;
+}
+
+/* Imagen dentro de cada plan */
+.plan-img {
+  width: 15%;
+  height: auto;
+}
+
+/* Título grande en los planes */
+.plbs {
+  color: #EEFB03;
+  font-size: 3.5rem;
+  margin-top: -1rem;
+}
+
+/* Texto descriptivo en los planes */
+.ulp {
+  color: rgb(255, 255, 255);
+  font-size: 1.7rem;
+  text-shadow: 2px 2px 2px #5e5000;
+  text-align: start;
+}
+
+/* Subtítulo o encabezado en los planes */
+.ph4 {
+  font-size: 1.6em;
+  display: grid;
+  margin-top: auto;
+  color: #7bffa7;
+  align-items: center;
+}
+
+/* Estilo principal para la sección de contacto */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para el formulario dentro de la sección de contacto */
+.contacto form {
+  width: 100%;
+  max-width: 80%;
+  font-size: 2.5rem;
+}
+
+/* Estilo para las etiquetas en el formulario de contacto */
+.contacto label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Estilos para los campos de texto y email en el formulario de contacto */
+.contacto input[type=text],
+.contacto input[type=email],
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #EEFB03;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+/* Estilo específico para el área de texto en el formulario de contacto */
+.contacto textarea {
+  height: 50%;
+}
+
+/* Estilo para el botón en el formulario de contacto */
+.contacto button {
+  display: flex;
+  background-color: #EEFB03;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+/* Estilo para el estado hover del botón en el formulario de contacto */
+.contacto button:hover {
+  background-color: #EEFB03;
+  transition: 0.3s ease;
+}
+
+/* Estilos Base */
+body {
+  background-color: black;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Estilo global para listas */
+ul {
+  text-align: right;
+}
+
+/* Titulo páginas*/
+.titulo-paginas {
+  font-size: 7rem;
+  color: white;
+  text-align: center;
+}
+
+/* Texto debajo de titulos */
+.texto-paginas {
+  font-size: 2rem;
+  color: #EEFB03;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: -6rem;
+}
+
+/* Footer: Estilos para el pie de página, asegurando que se mantenga al final y ocupe el ancho completo */
+footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Contenedor dentro del footer para posicionar el texto o contenido adicional */
+.p-footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* Estilos específicos para el párrafo dentro del contenedor del footer */
+.p-footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/*Estilos específicos de cada página*/
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  /*inicio*/
+  .batman img {
+    width: 90%;
+  }
+  .logo {
+    display: none;
+  }
+  /* Estilos para botones de menú en vista móvil */
+  .header {
+    position: relative;
+  }
+  .abrir-menu,
+  .cerrar-menu {
+    display: flex;
+    border: 0;
+    font-size: 4rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+  }
+  /* Estilos para la navegación en vista móvil */
+  .nav {
+    position: absolute;
+    top: 65%;
+    right: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+    align-items: end;
+    visibility: hidden;
+    margin-top: 5rem;
+    margin-right: 1rem;
+  }
+  /* Estilo para el primer elemento de la lista de navegación en móvil */
+  .nav-list li:first-child a {
+    color: #EEFB03;
+    margin-right: 0;
+  }
+  /* Estilos para mostrar la navegación cuando está activa en móvil */
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* Ajuste de la lista de navegación  */
+  .nav-list li a {
+    padding: 0;
+    font-size: 1.3rem;
+  }
+  /* Contenedor para los títulos, con alineación al inicio */
+  .titulo-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+  /* Estilos base para los títulos 'Javier' y 'Vázquez' */
+  .titulo-javier,
+  .titulo-vazquez {
+    font-size: 6rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  /* Estilo específico para aumentar el tamaño en 'título Vázquez' */
+  .titulo-vazquez {
+    font-size: 7rem;
+  }
+  /* Estilo para el contenedor principal, ocultando desbordamiento */
+  .index-cont {
+    overflow: hidden;
+  }
+  /* Posicionamiento relativo para un elemento, aquí 'batman' */
+  .batman {
+    position: relative;
+    overflow: hidden;
+  }
+  /* Estilo para la imagen dentro del contenedor 'batman', con posicionamiento absoluto */
+  .batman img {
+    overflow: hidden;
+  }
+  /* Estilos para texto adicional, con énfasis en color y subrayado */
+  .texto-adicional {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #EEFB03;
+    text-decoration: underline;
+  }
+  /*Logo*/
+  /* Estilos para el logotipo */
+  .logo {
+    position: relative;
+    margin-top: -3rem;
+    margin-left: -2rem;
+  }
+  .logo img {
+    width: 35%;
+    height: auto;
+    max-width: 100%;
+  }
+  /* Estilos para el contenedor de títulos de las páginas */
+  .contenedor-paginas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Estilos para los títulos y textos de las páginas */
+  .titulo-paginas,
+  .texto-paginas {
+    margin-top: 3rem;
+    padding: 0;
+  }
+  .titulo-paginas {
+    font-size: 5rem;
+    color: white;
+  }
+  /* Estilos para el texto debajo de los títulos */
+  .texto-paginas {
+    font-size: 1.5rem;
+    margin-top: -4rem;
+  }
+  /*Proyectos*/
+  .grid-container {
+    overflow-y: auto;
+  }
+  .slide img {
+    -o-object-fit: contain;
+       object-fit: contain; /* Hace que la imagen se ajuste dentro del contenedor sin cortarse */
+    height: auto; /* Ajusta la altura para mantener la proporción */
+    max-height: 50vh; /* Limita la altura de la imagen a un porcentaje de la altura de la ventana */
+  }
+  /*Servicios*/
+  .titulo-servicios {
+    font-size: 5rem;
+    left: 0;
+    right: 0;
+  }
+  .contenedor-titulo {
+    text-align: center;
+    margin-right: -1rem;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .contenedor-servicios {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .texto-servicios {
+    font-size: 1.5rem;
+    color: #EEFB03;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: -4rem;
+  }
+  /* Contenedor para la grilla de servicios, alineado al final */
+  .contenedor-grid {
+    display: grid;
+    margin-right: 2rem;
+    margin-top: -6rem;
+    margin-left: 0;
+  }
+  /* Diseño de grilla para elementos de servicio, con una sola columna */
+  .grid-servicios {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  /* Estilo para cada item de servicio, utilizando flexbox */
+  .service-item {
+    display: flex;
+    align-items: center;
+  }
+  /* Estilo para imágenes dentro de los items de servicio */
+  .service-item img {
+    width: 15%;
+    margin-right: 1rem;
+  }
+  /* Estilo para títulos adicionales en la sección de servicios */
+  .additional-title {
+    font-size: 1.6rem;
+    color: #ffee00;
+    margin: 0.3rem 0 0 0;
+  }
+  /* Estilo para párrafos en la sección de servicios */
+  .p-ser {
+    font-size: 1.2rem;
+  }
+  /*Planes*/
+  /* Contenedor para los planes, usando grid para la disposición */
+  .plan-container {
+    display: block;
+    font-size: 1.2rem;
+    justify-content: flex-start;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    text-align: left;
+    margin-top: 3rem;
+  }
+  /* Estilos para cada plan individual */
+  .plan {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    border-right: 1px solid #27ad4f;
+  }
+  /* Botón dentro de cada plan */
+  .plan-button {
+    margin-top: auto;
+    padding: auto;
+    width: auto;
+    display: grid;
+    justify-content: space-around;
+  }
+  /* Efecto al pasar el mouse sobre el botón */
+  .plan-button:hover {
+    background-color: #EEFB03;
+    transition: 0.5s ease;
+  }
+  /* Estilos para el último plan del contenedor */
+  .plan:last-child {
+    border-right: none;
+  }
+  /* Imagen dentro de cada plan */
+  .plan-img {
+    width: 15%;
+    height: auto;
+  }
+  /* Título grande en los planes */
+  .plbs {
+    color: #EEFB03;
+    font-size: 3.5rem;
+    margin-top: -1rem;
+  }
+  /* Texto descriptivo en los planes */
+  .ulp {
+    color: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    text-shadow: 2px 2px 2px #5e5000;
+    text-align: start;
+  }
+  /* Subtítulo o encabezado en los planes */
+  .ph4 {
+    font-size: 1.5em;
+    display: grid;
+    margin-top: auto;
+    color: #7bffa7;
+    align-items: center;
+  }
+  /*Contacto*/
+  /* Estilos base para la sección de contacto */
+  .contacto {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .abrir-menu,
+  .cerrar-menu {
+    margin-right: 2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
