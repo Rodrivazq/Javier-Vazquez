@@ -222,8 +222,8 @@
   justify-content: space-around;
   background-image: linear-gradient(to right, gold, white, gold);
   background-size: 200% 100%;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   border: none;
