@@ -1,73 +1,74 @@
-                /*Planes*/
-        
-        /* Contenedor para los planes, usando grid para la disposición */
-        .plan-container {
-            display: grid;
-            font-size: 1.5rem;
-            justify-content: space-around;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1rem;
-            text-align: center;
-        }
-        
-        /* Estilos para cada plan individual */
-        .plan {
-            display: grid;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            padding: 1rem;
-            font-size: 1.5rem;
-            border-right: 1px solid #ccc;
-        }
-        
-        /* Botón dentro de cada plan */
-        .plan-button {
-            margin-top: auto;
-            padding: auto;
-            width: auto;
-            display: grid;
-            justify-content: space-around;
-        }
-        
-        /* Efecto al pasar el mouse sobre el botón */
-        .plan-button:hover {
-            background-color: #EEFB03;
-            transition: 0.5s ease;
-        }
-        
-        /* Estilos para el último plan del contenedor */
-        .plan:last-child {
-            border-right: none;
-        }
-        
-        /* Imagen dentro de cada plan */
-        .plan-img {
-            width: 15%;
-            height: auto;
-        }
-        
-        /* Título grande en los planes */
-        .plbs {
-            color: #EEFB03;
-            font-size: 3.5rem;
-            margin-top: -1rem;
-        }
-        
-        /* Texto descriptivo en los planes */
-        .ulp {
-            color: rgb(255, 255, 255);
-            font-size: 1.7rem;
-            text-shadow: 2px 2px 2px #5e5000;
-            text-align: start;
-        }
-        
-        /* Subtítulo o encabezado en los planes */
-        .ph4 {
-            font-size: 1.6em;
-            display: grid;
-            margin-top: auto;
-            color: #7bffa7;
-            align-items: center;
-        }
-        
+// styles.scss
+@use 'variables' as *;
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.plan-container {
+    display: grid;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+
+.plan {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-right: 1px solid #ccc;
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.plan-button {
+    margin-top: auto;
+    padding: auto;
+    width: auto;
+    display: grid;
+    justify-content: space-around;
+
+    &:hover {
+        background-color: $amarillo;
+        transition: 0.5s ease;
+    }
+}
+
+.plan-img {
+    width: 15%;
+    height: auto;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.plbs {
+    color: $amarillo;
+    font-size: 3.5rem;
+    margin-top: -1rem;
+}
+
+.ulp {
+    color: $blanco;
+    font-size: 1.7rem;
+    text-shadow: 2px 2px 2px #5e5000;
+    text-align: start;
+}
+
+.ph4 {
+    font-size: 1.6em;
+    display: grid;
+    margin-top: auto;
+    color: #7bffa7;
+    align-items: center;
+}

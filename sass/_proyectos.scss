@@ -1,24 +1,20 @@
-                /*Proyectos*/
-        
-        /* Contenedor del grid */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0; /* Si no quieres espacio entre las imágenes */
-            margin: 0; /* Asegúrate de que no haya margen extra */
-        
-        }
-        
-        /* Estilos de imagen en slides */
-        .slide img {
-            width: 100%;
-            height: auto; /* Asegúrate de que las imágenes se estiren verticalmente si es lo que deseas */
-            object-fit: cover; /* Cambia a contain si no quieres que las imágenes se recorten */
-            transition: transform var(--transition-speed) ease;
-        }
-        
-        /* Efecto hover en imágenes de slides */
-        .slide:hover img {
-            transform: scale(1.05);
-        }
-        
+// styles.scss
+@use 'variables' as *;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; // Elimina el espacio entre las celdas si es lo que deseas
+    margin: 0; // Asegura que no haya márgenes extra
+}
+
+.slide img {
+    width: 100%;
+    height: auto; // Asegura que las imágenes se ajusten verticalmente
+    object-fit: cover; // Mantiene las imágenes recortadas para que llenen el espacio
+    transition: transform $transition-speed ease;
+}
+
+.slide:hover img {
+    transform: scale(1.05); // Efecto zoom sutil al hacer hover
+}

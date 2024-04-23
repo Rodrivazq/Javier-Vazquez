@@ -33,12 +33,27 @@ body {
         
                 /* Titulo páginas*/
         
-        .titulo-paginas {
-            font-size: 7rem;
-            color: white;
-            text-align: center;
-        }
-        
+                .titulo-paginas {
+                    font-size: 7rem;
+                    color: transparent; // Hace el texto transparente para que el gradiente sea visible
+                    text-align: center;
+                    background-image: linear-gradient(to right, gold, white, white, gold ,);
+                    background-size: 200% auto;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: shine 8s linear infinite;
+                }
+                
+                @keyframes shine {
+                    from {
+                        background-position: 200% center;
+                    }
+                    to {
+                        background-position: -200% center;
+                    }
+                }
+                
         /* Texto debajo de titulos */
         
         .texto-paginas {

@@ -1,39 +1,45 @@
-@use 'variables';
+@use 'variables' as *; // Importa todas las variables sin necesidad de prefijo
+
 .nav-list {
     list-style-type: none;
     display: flex;
     gap: 1rem;
     right: 0;
     position: absolute;
+    font-family: $fuente-principal; // Uso de la variable para la fuente
+
+    li {
+        a {
+            color: $blanco; // Uso de la variable para el color
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 0.5em;
+            font-size: 1.9rem;
+
+            // Estilo al hacer hover sobre los enlaces
+            &:hover {
+                text-decoration: underline;
+                color: $amarillo; // Uso de la variable para el color en hover
+            }
+        }
+
+        // Estilos específicos para hover en li que afecta a los enlaces dentro
+        &:hover a {
+            text-decoration: underline;
+            color: $amarillo; // Asegura que el color en hover es el mismo
+        }
+
+        // Estilos para el primer enlace de la lista de navegación
+        &:first-child a {
+            color: $amarillo; // Uso de la variable para el color
+            margin-right: 4rem;
+        }
+    }
 }
 
-/* Estilos para los enlaces dentro de la lista de navegación */
-.nav-list li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    padding: 0.5em;
-    font-size: 1.9rem;
-}
-
-.nav-list li:hover a,
-.nav-list a:hover {
-    text-decoration: underline;
-    color: variables.$amarillo;
-}
-
-/* Estilos específicos para el primer enlace de la lista de navegación */
-.nav-list li:first-child a {
-    color: variables.$amarillo;
-    margin-right: 4rem;
-}
-
-/* Estilos para los botones de menú en la versión móvil */
+// Estilos para los botones de menú en la versión móvil
 .abrir-menu,
-.cerrar-menu {
-    display: none;
-}
-
+.cerrar-menu,
 #cerrar {
     display: none;
 }

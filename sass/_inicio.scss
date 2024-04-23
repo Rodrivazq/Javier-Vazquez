@@ -5,6 +5,12 @@
         .titulo-javier,
         .titulo-vazquez {
             margin-left: 3rem;
+            background-image: linear-gradient(to right, gold, white, white, gold ,);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 8s linear infinite;
         }
         
         /* Estilos específicos para el título 'Javier' */

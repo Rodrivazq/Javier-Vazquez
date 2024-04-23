@@ -1,54 +1,49 @@
-@use 'variables';
-        /* Estilo principal para la sección de contacto */
-        .contacto {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+// styles.scss
+@use 'variables' as *;
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+        width: 100%;
+        max-width: 80%;
+        font-size: 2.5rem;
+    }
+
+    label {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 2px solid $amarillo;
+        border-radius: 5px;
+        font-size: 1.5rem;
+    }
+
+    textarea {
+        height: 50%;
+    }
+
+    button {
+        display: flex;
+        background-color: $amarillo;
+        color: $negro;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 3rem;
+
+        &:hover {
+            background-color: rgb(255, 208, 0);
+            transition: 0.2s ease;
         }
-        
-        /* Estilo para el formulario dentro de la sección de contacto */
-        .contacto form {
-            width: 100%;
-            max-width: 80%;
-            font-size: 2.5rem;
-        }
-        
-        /* Estilo para las etiquetas en el formulario de contacto */
-        .contacto label {
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        
-        /* Estilos para los campos de texto y email en el formulario de contacto */
-        .contacto input[type="text"],
-        .contacto input[type="email"],
-        .contacto textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 2px solid variables.$amarillo;
-            border-radius: 5px;
-            font-size: 1.5rem;
-        }
-        
-        /* Estilo específico para el área de texto en el formulario de contacto */
-        .contacto textarea {
-            height: 50%;
-        }
-        
-        /* Estilo para el botón en el formulario de contacto */
-        .contacto button {
-            display: flex;
-            background-color: variables.$amarillo;
-            color: #000;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 3rem;
-        }
-        
-        /* Estilo para el estado hover del botón en el formulario de contacto */
-        .contacto button:hover {
-            background-color: variables.$amarillo;
-            transition: 0.3s ease;
-        }
+    }
+}
