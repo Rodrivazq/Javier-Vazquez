@@ -1,53 +1,259 @@
-@use 'variables';
-                /* Inicio */
-        
-        /* Estilos generales para los títulos 'Javier' y 'Vázquez' */
-        .titulo-javier,
-        .titulo-vazquez {
-            margin-left: 3rem;
-            background-image: linear-gradient(to right, gold, white, white, gold ,);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shine 8s linear infinite;
+@use 'variables' as *;
+
+@keyframes bounce {
+    100% {
+        transform: translateY(0);
         }
-        
-        /* Estilos específicos para el título 'Javier' */
-        .titulo-javier {
-            font-size: 10rem;
-            margin-left: 1.5rem;
-            margin-top: 10rem;
+        40% {
+        transform: translateY(-20px);
         }
-        
-        /* Estilos específicos para el título 'Vázquez' */
-        .titulo-vazquez {
-            font-size: 11rem;
-            margin-left: 3.125rem;
+        60% {
+        transform: translateY(-10px);
         }
-        
-        
-        /* Estilos para el contenedor "batman" */
-        .batman {
+    }
+    
+
+/* Estilos para los títulos */
+.titulo-javier, .titulo-vazquez {
+    margin-left: 3rem;
+    background-image: linear-gradient(to right, $gold, $blanco, $blanco, $gold);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+
+    &.titulo-javier {
+        font-size: 10rem;
+        margin-left: 1.5rem;
+        margin-top: 7rem;
+    }
+
+    &.titulo-vazquez {
+        font-size: 11rem;
+        margin-left: 3.125rem;
+        margin-top: -4rem;
+    }
+}
+
+.texto-adicional {
+    font-family: $fuente-principal;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: $amarillo;
+    margin-left: 5vw;
+    text-decoration: underline;
+    margin-top: -3rem;
+}
+
+.batman {
+    position: absolute;
+    img {
+    position: relative;
+    width: 70vw;
+    height: auto;
+    z-index: -1;
+    margin-left: 50vw;
+        margin-top: -5vw;
+    }
+}
+
+/* Estilos para el botón de desplazamiento */
+.btn-link {
+    font-size: 2rem; /* Aumenta el tamaño del texto y el ícono */
+    padding: 10px 20px; /* Añade espacio interno alrededor del contenido del botón */
+    border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+    color: $amarillo; /* Color del texto e ícono dentro del botón */
+    background-color: #000000; /* Color de fondo azul */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    animation: bounce infinite 2s;
+    margin-top: 5%;
+}
+
+/* Ajustes específicos para el ícono dentro del botón */
+.bi-arrow-down-circle-fill {
+    font-size: 50px; /* Ajusta el tamaño del ícono específicamente */
+}
+.btn-link:hover .bi-arrow-down-circle-fill {
+    color: $gold; /* Nuevo color para el ícono al pasar el ratón por encima */
+}
+
+/* Estilos personalizados para el botón 'Ver todos los proyectos' */
+.boton-proyectos a.btn {
+    background-color: $amarillo; /* Azul Bootstrap primario, cambia esto por el color que prefieras */
+    color: black; /* Color de texto */
+    border: none; /* Elimina el borde si no lo necesitas */
+    padding: 10px 20px; /* Añade algo de padding para hacer el botón más grande */
+    font-weight: bold; /* Hace el texto más bold */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza la transición de colores */
+    margin-top: -2rem;
+    font-size: 2rem;
+}
+
+.boton-proyectos a.btn:hover, .boton-proyectos a.btn:focus {
+    background-color: $gold; /* Un azul más oscuro para el hover */
+    color: black; /* Cambia el color del texto al hacer hover */
+    font-size: 2.1rem;
+}
+
+
+
+.dual-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Define dos columnas de igual tamaño
+    grid-gap: 20px; // Espacio entre las columnas
+    align-items: start; // Alinea los contenidos al inicio de sus celdas respectivas
+    margin-top: 10%;
+
+    #myCarousel {
+        grid-column: 2 / 2; // Ocupa la primera columna
+        margin-left: 20%; // Ajuste para alinear correctamente el carrusel
+        width: 60%; // Usa todo el ancho disponible de la columna
+        max-width: 100%; // Limita el ancho máximo al 100%
+        margin-top: 0; // Ajusta si es necesario
+
+        .carousel {
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+
+            .carousel-item img {
+                width: 100%;
+                height: auto; // Mantiene la proporción de las imágenes
+            }
+        }
+    }
+
+    .content-wrapper {
+        grid-column: 1 / 2; // Ocupa la segunda columna
+        margin-left: 0; // Elimina cualquier margen izquierdo, no necesario con grid
+        align-self: start;
+
+        .image-container, .text-container {
+            width: 100%; // Ajusta el ancho para llenar la columna
             position: relative;
+            text-align: center; // Ajusta si es necesario
+            font-size: 1.1rem;
+            font-style: italic;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-top: 0; // Alinea con el inicio de la columna
+
+            img {
+                width: 70%; // Ajusta el ancho de la imagen para que llene su contenedor
+                margin-top: 0; // Ajusta el margen superior si es necesario
+            }
         }
-        
-        /* Estilos para la imagen dentro del contenedor '.batman', posicionamiento y tamaño */
-        .batman img {
-            position: absolute;
-            width: 70vw;
-            height: auto;
-            z-index: -1; 
-            left: 50vw;
+    }
+}
+
+
+@media (max-width: 768px) {
+  /* Estilos base para los títulos 'Javier' y 'Vázquez' */
+.titulo-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -3rem;
+}
+
+.btn-link{
+    margin-top: 50%;
+}
+
+.titulo-javier, .titulo-vazquez {
+    margin-left: 3rem;
+    background-image: linear-gradient(to right, $gold, $blanco, $blanco, $gold);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+
+    &.titulo-javier {
+        font-size: 5.5rem;
+        margin-left: 1.5rem;
+        margin-top: -12rem;
+    }
+
+    &.titulo-vazquez {
+        font-size: 6rem;
+        margin-left: 3.125rem;
+        margin-top: -10%;
+    }
+}
+
+/* Estilo para el contenedor principal, ocultando desbordamiento */
+.index-cont {
+    overflow: hidden;
+}
+
+/* Posicionamiento relativo para un elemento, aquí 'batman' */
+.batman {
+    position: relative;
+    visibility: hidden;
+}
+
+/* Estilo para la imagen dentro del contenedor 'batman', con posicionamiento absoluto */
+.batman img {
+    overflow: hidden;
+}
+
+/* Estilos para texto adicional, con énfasis en color y subrayado */
+.texto-adicional {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #EEFB03;
+    text-decoration: underline;
+    margin-left: 3vw;
+    text-align: center;
+    margin-top: -5%;
+}
+
+#myCarousel {
+    grid-column: 2 / 2; // Ocupa la primera columna
+    margin-left: 20%; // Ajuste para alinear correctamente el carrusel
+    width: 100%; // Usa todo el ancho disponible de la columna
+    max-width: 100%; // Limita el ancho máximo al 100%
+    margin-top: 0; // Ajusta si es necesario
+
+    .carousel {
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+
+        .carousel-item img {
+            width: 100%;
+            height: auto; // Mantiene la proporción de las imágenes
         }
-        /* Estilos para texto adicional en la página, con tipografía específica, tamaño, color y decoración */
-        .texto-adicional {
-            font-family: "Bebas Neue", sans-serif;
-            font-size: 2rem;
-            font-weight: normal;
-            color: variables.$amarillo;
-            margin-left: 5%;
-            text-decoration: underline;
-        }
-        
-        
+    }
+}
+    .btn-link {
+        font-size: 1.2rem; // Tamaño de fuente reducido para los botones
+        padding: 5px 10px; // Menos padding para mantener el diseño limpio
+        position: inherit;
+        pointer-events: none;
+    }
+
+    .dual-section {
+        display: block;
+        margin-bottom: 20%;
+    }
+
+    .boton-proyectos a.btn {
+        background-color: $amarillo; /* Azul Bootstrap primario, cambia esto por el color que prefieras */
+        color: black; /* Color de texto */
+        border: none; /* Elimina el borde si no lo necesitas */
+        padding: 10px 20px; /* Añade algo de padding para hacer el botón más grande */
+        font-weight: bold; /* Hace el texto más bold */
+        transition: background-color 0.3s, color 0.3s; /* Suaviza la transición de colores */
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .boton-proyectos a.btn:hover, .boton-proyectos a.btn:focus {
+        background-color: $gold; /* Un azul más oscuro para el hover */
+        color: black; /* Cambia el color del texto al hacer hover */
+        font-size: 1.1rem;
+    }
+    
+}

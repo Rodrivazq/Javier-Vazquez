@@ -1,0 +1,25 @@
+@use 'variables' as *;
+.footer {
+    color: $amarillo;
+    margin-top: 1% !important;
+    text-align: center;
+}
+
+.footer a {
+    color: $amarillo;
+}
+
+.footer a:hover {
+    color: $gold; /* Cambio de color al pasar el ratón por encima */
+    background-color: transparent; /* Mantiene el fondo transparente en hover */
+}
+
+.btn-outline-light {
+    border-color:black; /* Borde blanco para los botones */
+    border:30px!important;
+}
+
+.btn-outline-light:hover {
+    background-color: #333; /* Fondo más oscuro en hover */
+}
+

@@ -5,7 +5,7 @@
 @use 'planes';
 @use 'contacto';
 @use 'variables';
-
+@use '_footer';
 /* Estilos Base */
 body {
     background-color: black; 
@@ -43,6 +43,7 @@ body {
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
                     animation: shine 8s linear infinite;
+                    margin-top: 5rem;
                 }
                 
                 @keyframes shine {
@@ -61,7 +62,7 @@ body {
             color: variables.$amarillo;
             text-decoration: underline;
             text-align: center;
-            margin-top: -6rem;
+            margin-top: -1.5rem;
         }
         
         /* Footer: Estilos para el pie de página, asegurando que se mantenga al final y ocupe el ancho completo */
@@ -97,102 +98,6 @@ body {
             display:none
         }
         
-                /* Estilos para botones de menú en vista móvil */
-                .header {
-                    position: relative;
-                }
-                
-                .abrir-menu,
-                .cerrar-menu {
-                    display: flex;
-                    border: 0;
-                    font-size: 4rem;
-                    background-color: transparent;
-                    color: white;
-                    cursor: pointer;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    margin-top: 1rem;
-                }
-            
-                /* Estilos para la navegación en vista móvil */
-                .nav {
-                    position: absolute;
-                    top: 65%;
-                    right: 0;
-                    padding: 0;
-                    display: grid;
-                    grid-template-rows: auto;
-                    align-items: end;
-                    visibility: hidden;
-                    margin-top: 5rem;
-                    margin-right: 1rem;
-                }
-            
-                /* Estilo para el primer elemento de la lista de navegación en móvil */
-                .nav-list li:first-child a {
-                    color: #EEFB03;
-                    margin-right: 0;
-                }
-            
-                /* Estilos para mostrar la navegación cuando está activa en móvil */
-                .nav.visible {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            
-                /* Ajuste de la lista de navegación  */
-                .nav-list li a {
-                    padding: 0;
-                    font-size: 1.3rem;
-                }
-            
-        /* Contenedor para los títulos, con alineación al inicio */
-        .titulo-contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-top: 0;
-        }
-        
-        /* Estilos base para los títulos 'Javier' y 'Vázquez' */
-        .titulo-javier,
-        .titulo-vazquez {
-            font-size: 6rem;
-            margin-left: 0;
-            text-align: center;
-        }
-        
-        /* Estilo específico para aumentar el tamaño en 'título Vázquez' */
-        .titulo-vazquez {
-            font-size: 7rem;
-        }
-        
-        /* Estilo para el contenedor principal, ocultando desbordamiento */
-        .index-cont {
-            overflow: hidden;
-        }
-        
-        /* Posicionamiento relativo para un elemento, aquí 'batman' */
-        .batman {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* Estilo para la imagen dentro del contenedor 'batman', con posicionamiento absoluto */
-        .batman img {
-            overflow: hidden;
-        }
-        
-        /* Estilos para texto adicional, con énfasis en color y subrayado */
-        .texto-adicional {
-            font-size: 2rem;
-            font-weight: normal;
-            color: #EEFB03;
-            text-decoration: underline;
-        }
-        
                 /*Logo*/
         
         /* Estilos para el logotipo */
@@ -217,7 +122,7 @@ body {
         /* Estilos para los títulos y textos de las páginas */
         .titulo-paginas,
         .texto-paginas {
-            margin-top: 3rem;
+            margin-top: 0%;
             padding: 0;
         }
         .titulo-paginas {
@@ -228,7 +133,7 @@ body {
         /* Estilos para el texto debajo de los títulos */
         .texto-paginas {
             font-size: 1.5rem;
-            margin-top: -4rem;
+            margin-top: -1.5rem;
         }
         
         
@@ -247,71 +152,6 @@ body {
         
         /*Servicios*/
         
-        .titulo-servicios {
-            font-size: 5rem;
-            left: 0;
-            right: 0;
-        }
-        
-        .contenedor-titulo{
-            text-align: center;
-            margin-right: -1rem;
-            margin-left: 0;
-            margin-bottom: 0;
-        }
-        
-        .contenedor-servicios{
-            display: block;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-        
-        .texto-servicios {
-            font-size: 1.5rem;
-            color: #EEFB03;
-            text-decoration: underline;
-            text-align: center;
-            margin-top: -4rem;
-        }
-        
-        /* Contenedor para la grilla de servicios, alineado al final */
-        .contenedor-grid {
-            display: grid;
-            margin-right: 2rem;
-            margin-top: -6rem;
-            margin-left: 0;
-        }
-        
-        /* Diseño de grilla para elementos de servicio, con una sola columna */
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: auto;
-        }
-        
-        /* Estilo para cada item de servicio, utilizando flexbox */
-        .service-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        /* Estilo para imágenes dentro de los items de servicio */
-        .service-item img {
-            width: 15%;
-            margin-right: 1rem;
-        }
-        
-        /* Estilo para títulos adicionales en la sección de servicios */
-        .additional-title {
-            font-size: 1.6rem;
-            color: #ffee00;
-            margin: 0.3rem 0 0 0;
-        }
-        
-        /* Estilo para párrafos en la sección de servicios */
-        .p-ser {
-            font-size: 1.2rem;
-        }
         
                 /*Planes*/
         

@@ -5,7 +5,7 @@
   gap: 1rem;
   right: 0;
   position: absolute;
-  font-family: font-family "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 .nav-list li a {
   color: white;
@@ -27,16 +27,67 @@
   margin-right: 4rem;
 }
 
-.abrir-menu,
-.cerrar-menu,
-#cerrar {
-  display: none;
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+  }
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 3.5rem;
+    background-color: transparent;
+    color: white;
+    position: relative;
+    margin-left: 82%;
+  }
+  /* Estilos para la navegación en vista móvil */
+  .nav {
+    position: absolute;
+    top: 65%;
+    right: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+    align-items: end;
+    visibility: hidden;
+    margin-top: 4rem;
+    margin-right: 2rem;
+  }
+  /* Estilo para el primer elemento de la lista de navegación en móvil */
+  .nav-list li:first-child a {
+    color: #EEFB03;
+    margin-right: 0;
+  }
+  /* Estilos para mostrar la navegación cuando está activa en móvil */
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* Ajuste de la lista de navegación  */
+  .nav-list li a {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  .abrir-menu,
+  .cerrar-menu,
+  #cerrar {
+    display: none;
+  }
 }
-
-/* Inicio */
-/* Estilos generales para los títulos 'Javier' y 'Vázquez' */
-.titulo-javier,
-.titulo-vazquez {
+@keyframes bounce {
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+/* Estilos para los títulos */
+.titulo-javier, .titulo-vazquez {
   margin-left: 3rem;
   background-image: linear-gradient(to right, gold, white, white, gold);
   background-size: 200% auto;
@@ -45,44 +96,215 @@
   -webkit-text-fill-color: transparent;
   animation: shine 8s linear infinite;
 }
-
-/* Estilos específicos para el título 'Javier' */
-.titulo-javier {
+.titulo-javier.titulo-javier, .titulo-vazquez.titulo-javier {
   font-size: 10rem;
   margin-left: 1.5rem;
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
-
-/* Estilos específicos para el título 'Vázquez' */
-.titulo-vazquez {
+.titulo-javier.titulo-vazquez, .titulo-vazquez.titulo-vazquez {
   font-size: 11rem;
   margin-left: 3.125rem;
+  margin-top: -4rem;
 }
 
-/* Estilos para el contenedor "batman" */
+.texto-adicional {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #EEFB03;
+  margin-left: 5vw;
+  text-decoration: underline;
+  margin-top: -3rem;
+}
+
 .batman {
-  position: relative;
-}
-
-/* Estilos para la imagen dentro del contenedor '.batman', posicionamiento y tamaño */
-.batman img {
   position: absolute;
+}
+.batman img {
+  position: relative;
   width: 70vw;
   height: auto;
   z-index: -1;
-  left: 50vw;
+  margin-left: 50vw;
+  margin-top: -5vw;
 }
 
-/* Estilos para texto adicional en la página, con tipografía específica, tamaño, color y decoración */
-.texto-adicional {
-  font-family: "Bebas Neue", sans-serif;
+/* Estilos para el botón de desplazamiento */
+.btn-link {
+  font-size: 2rem; /* Aumenta el tamaño del texto y el ícono */
+  padding: 10px 20px; /* Añade espacio interno alrededor del contenido del botón */
+  border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+  color: #EEFB03; /* Color del texto e ícono dentro del botón */
+  background-color: #000000; /* Color de fondo azul */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  animation: bounce infinite 2s;
+  margin-top: 5%;
+}
+
+/* Ajustes específicos para el ícono dentro del botón */
+.bi-arrow-down-circle-fill {
+  font-size: 50px; /* Ajusta el tamaño del ícono específicamente */
+}
+
+.btn-link:hover .bi-arrow-down-circle-fill {
+  color: gold; /* Nuevo color para el ícono al pasar el ratón por encima */
+}
+
+/* Estilos personalizados para el botón 'Ver todos los proyectos' */
+.boton-proyectos a.btn {
+  background-color: #EEFB03; /* Azul Bootstrap primario, cambia esto por el color que prefieras */
+  color: black; /* Color de texto */
+  border: none; /* Elimina el borde si no lo necesitas */
+  padding: 10px 20px; /* Añade algo de padding para hacer el botón más grande */
+  font-weight: bold; /* Hace el texto más bold */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza la transición de colores */
+  margin-top: -2rem;
   font-size: 2rem;
-  font-weight: normal;
-  color: #EEFB03;
-  margin-left: 5%;
-  text-decoration: underline;
 }
 
+.boton-proyectos a.btn:hover, .boton-proyectos a.btn:focus {
+  background-color: gold; /* Un azul más oscuro para el hover */
+  color: black; /* Cambia el color del texto al hacer hover */
+  font-size: 2.1rem;
+}
+
+.dual-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: start;
+  margin-top: 10%;
+}
+.dual-section #myCarousel {
+  grid-column: 2/2;
+  margin-left: 20%;
+  width: 60%;
+  max-width: 100%;
+  margin-top: 0;
+}
+.dual-section #myCarousel .carousel {
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.dual-section #myCarousel .carousel .carousel-item img {
+  width: 100%;
+  height: auto;
+}
+.dual-section .content-wrapper {
+  grid-column: 1/2;
+  margin-left: 0;
+  align-self: start;
+}
+.dual-section .content-wrapper .image-container, .dual-section .content-wrapper .text-container {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 0;
+}
+.dual-section .content-wrapper .image-container img, .dual-section .content-wrapper .text-container img {
+  width: 70%;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  /* Estilos base para los títulos 'Javier' y 'Vázquez' */
+  .titulo-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -3rem;
+  }
+  .btn-link {
+    margin-top: 50%;
+  }
+  .titulo-javier, .titulo-vazquez {
+    margin-left: 3rem;
+    background-image: linear-gradient(to right, gold, white, white, gold);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+  }
+  .titulo-javier.titulo-javier, .titulo-vazquez.titulo-javier {
+    font-size: 5.5rem;
+    margin-left: 1.5rem;
+    margin-top: -12rem;
+  }
+  .titulo-javier.titulo-vazquez, .titulo-vazquez.titulo-vazquez {
+    font-size: 6rem;
+    margin-left: 3.125rem;
+    margin-top: -10%;
+  }
+  /* Estilo para el contenedor principal, ocultando desbordamiento */
+  .index-cont {
+    overflow: hidden;
+  }
+  /* Posicionamiento relativo para un elemento, aquí 'batman' */
+  .batman {
+    position: relative;
+    visibility: hidden;
+  }
+  /* Estilo para la imagen dentro del contenedor 'batman', con posicionamiento absoluto */
+  .batman img {
+    overflow: hidden;
+  }
+  /* Estilos para texto adicional, con énfasis en color y subrayado */
+  .texto-adicional {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #EEFB03;
+    text-decoration: underline;
+    margin-left: 3vw;
+    text-align: center;
+    margin-top: -5%;
+  }
+  #myCarousel {
+    grid-column: 2/2;
+    margin-left: 20%;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+  #myCarousel .carousel {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  #myCarousel .carousel .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  .btn-link {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    position: inherit;
+    pointer-events: none;
+  }
+  .dual-section {
+    display: block;
+    margin-bottom: 20%;
+  }
+  .boton-proyectos a.btn {
+    background-color: #EEFB03; /* Azul Bootstrap primario, cambia esto por el color que prefieras */
+    color: black; /* Color de texto */
+    border: none; /* Elimina el borde si no lo necesitas */
+    padding: 10px 20px; /* Añade algo de padding para hacer el botón más grande */
+    font-weight: bold; /* Hace el texto más bold */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza la transición de colores */
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  .boton-proyectos a.btn:hover, .boton-proyectos a.btn:focus {
+    background-color: gold; /* Un azul más oscuro para el hover */
+    color: black; /* Cambia el color del texto al hacer hover */
+    font-size: 1.1rem;
+  }
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -143,7 +365,7 @@
   color: #EEFB03;
   text-decoration: underline;
   text-align: center;
-  margin-top: -6rem;
+  margin-top: -2rem;
 }
 
 .contenedor-grid {
@@ -158,6 +380,7 @@
   grid-template-columns: auto;
   margin-left: auto;
   margin-top: 6rem;
+  margin-bottom: 4%;
 }
 
 .service-item {
@@ -172,18 +395,53 @@
 }
 
 .additional-title {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: #EEFB03;
-  margin: 5px 0;
+  margin: 3% 0;
 }
 
 .p-ser {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media (max-width: 768px) {
+  .titulo-servicios {
+    font-size: 5rem;
+    left: 0;
+    right: 0;
+  }
+  .contenedor-titulo {
+    text-align: center;
+    margin-right: 0rem;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: -10%;
+  }
+  .contenedor-servicios {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .texto-servicios {
+    font-size: 1.5rem;
+    color: #EEFB03;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: -1rem;
+  }
+  .grid-servicios {
+    display: block;
+    grid-template-columns: auto;
+    margin-left: -20%;
+    margin-top: 2rem;
+    margin-bottom: 4%;
+  }
+}
 @keyframes gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
@@ -199,6 +457,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   text-align: center;
+  margin-bottom: 1%;
 }
 
 .plan {
@@ -306,6 +565,30 @@
   transition: 0.2s ease;
 }
 
+.footer {
+  color: #EEFB03;
+  margin-top: 1% !important;
+  text-align: center;
+}
+
+.footer a {
+  color: #EEFB03;
+}
+
+.footer a:hover {
+  color: gold; /* Cambio de color al pasar el ratón por encima */
+  background-color: transparent; /* Mantiene el fondo transparente en hover */
+}
+
+.btn-outline-light {
+  border-color: black; /* Borde blanco para los botones */
+  border: 30px !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #333; /* Fondo más oscuro en hover */
+}
+
 /* Estilos Base */
 body {
   background-color: black;
@@ -342,6 +625,7 @@ ul {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 8s linear infinite;
+  margin-top: 5rem;
 }
 
 @keyframes shine {
@@ -358,7 +642,7 @@ ul {
   color: #EEFB03;
   text-decoration: underline;
   text-align: center;
-  margin-top: -6rem;
+  margin-top: -1.5rem;
 }
 
 /* Footer: Estilos para el pie de página, asegurando que se mantenga al final y ocupe el ancho completo */
@@ -389,89 +673,6 @@ footer {
   .logo {
     display: none;
   }
-  /* Estilos para botones de menú en vista móvil */
-  .header {
-    position: relative;
-  }
-  .abrir-menu,
-  .cerrar-menu {
-    display: flex;
-    border: 0;
-    font-size: 4rem;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 1rem;
-  }
-  /* Estilos para la navegación en vista móvil */
-  .nav {
-    position: absolute;
-    top: 65%;
-    right: 0;
-    padding: 0;
-    display: grid;
-    grid-template-rows: auto;
-    align-items: end;
-    visibility: hidden;
-    margin-top: 5rem;
-    margin-right: 1rem;
-  }
-  /* Estilo para el primer elemento de la lista de navegación en móvil */
-  .nav-list li:first-child a {
-    color: #EEFB03;
-    margin-right: 0;
-  }
-  /* Estilos para mostrar la navegación cuando está activa en móvil */
-  .nav.visible {
-    opacity: 1;
-    visibility: visible;
-  }
-  /* Ajuste de la lista de navegación  */
-  .nav-list li a {
-    padding: 0;
-    font-size: 1.3rem;
-  }
-  /* Contenedor para los títulos, con alineación al inicio */
-  .titulo-contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 0;
-  }
-  /* Estilos base para los títulos 'Javier' y 'Vázquez' */
-  .titulo-javier,
-  .titulo-vazquez {
-    font-size: 6rem;
-    margin-left: 0;
-    text-align: center;
-  }
-  /* Estilo específico para aumentar el tamaño en 'título Vázquez' */
-  .titulo-vazquez {
-    font-size: 7rem;
-  }
-  /* Estilo para el contenedor principal, ocultando desbordamiento */
-  .index-cont {
-    overflow: hidden;
-  }
-  /* Posicionamiento relativo para un elemento, aquí 'batman' */
-  .batman {
-    position: relative;
-    overflow: hidden;
-  }
-  /* Estilo para la imagen dentro del contenedor 'batman', con posicionamiento absoluto */
-  .batman img {
-    overflow: hidden;
-  }
-  /* Estilos para texto adicional, con énfasis en color y subrayado */
-  .texto-adicional {
-    font-size: 2rem;
-    font-weight: normal;
-    color: #EEFB03;
-    text-decoration: underline;
-  }
   /*Logo*/
   /* Estilos para el logotipo */
   .logo {
@@ -493,7 +694,7 @@ footer {
   /* Estilos para los títulos y textos de las páginas */
   .titulo-paginas,
   .texto-paginas {
-    margin-top: 3rem;
+    margin-top: 0%;
     padding: 0;
   }
   .titulo-paginas {
@@ -503,7 +704,7 @@ footer {
   /* Estilos para el texto debajo de los títulos */
   .texto-paginas {
     font-size: 1.5rem;
-    margin-top: -4rem;
+    margin-top: -1.5rem;
   }
   /*Proyectos*/
   .grid-container {
@@ -515,62 +716,6 @@ footer {
     max-height: 50vh; /* Limita la altura de la imagen a un porcentaje de la altura de la ventana */
   }
   /*Servicios*/
-  .titulo-servicios {
-    font-size: 5rem;
-    left: 0;
-    right: 0;
-  }
-  .contenedor-titulo {
-    text-align: center;
-    margin-right: -1rem;
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-  .contenedor-servicios {
-    display: block;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  .texto-servicios {
-    font-size: 1.5rem;
-    color: #EEFB03;
-    text-decoration: underline;
-    text-align: center;
-    margin-top: -4rem;
-  }
-  /* Contenedor para la grilla de servicios, alineado al final */
-  .contenedor-grid {
-    display: grid;
-    margin-right: 2rem;
-    margin-top: -6rem;
-    margin-left: 0;
-  }
-  /* Diseño de grilla para elementos de servicio, con una sola columna */
-  .grid-servicios {
-    display: grid;
-    grid-template-columns: auto;
-  }
-  /* Estilo para cada item de servicio, utilizando flexbox */
-  .service-item {
-    display: flex;
-    align-items: center;
-  }
-  /* Estilo para imágenes dentro de los items de servicio */
-  .service-item img {
-    width: 15%;
-    margin-right: 1rem;
-  }
-  /* Estilo para títulos adicionales en la sección de servicios */
-  .additional-title {
-    font-size: 1.6rem;
-    color: #ffee00;
-    margin: 0.3rem 0 0 0;
-  }
-  /* Estilo para párrafos en la sección de servicios */
-  .p-ser {
-    font-size: 1.2rem;
-  }
   /*Planes*/
   /* Contenedor para los planes, usando grid para la disposición */
   .plan-container {

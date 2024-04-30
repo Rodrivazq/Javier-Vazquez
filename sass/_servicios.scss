@@ -44,7 +44,7 @@
     color: $amarillo;
     text-decoration: underline;
     text-align: center;
-    margin-top: -6rem;
+    margin-top: -2rem;
 }
 
 .contenedor-grid {
@@ -59,6 +59,8 @@
     grid-template-columns: auto;
     margin-left: auto;
     margin-top: 6rem;
+    margin-bottom: 4%;
+
 }
 
 .service-item {
@@ -73,14 +75,50 @@
 }
 
 .additional-title {
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: $amarillo;
-    margin: 5px 0;
+    margin: 3% 0;
 }
 
 .p-ser {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+@media (max-width: 768px) {
+    .titulo-servicios {
+        font-size: 5rem;
+        left: 0;
+        right: 0;
+    }
+    .contenedor-titulo {
+        text-align: center;
+        margin-right: 0rem;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: -10%;
+    }
+    .contenedor-servicios {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .texto-servicios {
+        font-size: 1.5rem;
+        color: #EEFB03;
+        text-decoration: underline;
+        text-align: center;
+        margin-top: -1rem;
+    }
+    .grid-servicios {
+        display: block;
+        grid-template-columns: auto;
+        margin-left: -20%;
+        margin-top: 2rem;
+        margin-bottom: 4%;
+    
+    }
 }

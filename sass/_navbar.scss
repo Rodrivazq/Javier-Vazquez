@@ -36,10 +36,52 @@
         }
     }
 }
-
+@media (max-width: 768px){
+.header {
+    position: relative;
+}
+.abrir-menu,
+.cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 3.5rem;
+    background-color: transparent;
+    color: white;
+    position: relative;
+    margin-left: 82%;
+}
+  /* Estilos para la navegación en vista móvil */
+.nav {
+    position: absolute;
+    top: 65%;
+    right: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+    align-items: end;
+    visibility: hidden;
+    margin-top: 4rem;
+    margin-right: 2rem;
+}
+  /* Estilo para el primer elemento de la lista de navegación en móvil */
+.nav-list li:first-child a {
+    color: #EEFB03;
+    margin-right: 0;
+}
+  /* Estilos para mostrar la navegación cuando está activa en móvil */
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+}
+  /* Ajuste de la lista de navegación  */
+.nav-list li a {
+    padding: 0;
+    font-size: 1.5rem;
+}
 // Estilos para los botones de menú en la versión móvil
 .abrir-menu,
 .cerrar-menu,
 #cerrar {
     display: none;
+}
 }

@@ -31,4 +31,16 @@ cerrar.addEventListener("click", () => {
             }
         }
     });
-
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollButton = document.querySelector('a[href="#endOfPage"]');
+        if (scrollButton) {
+          scrollButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const endElement = document.querySelector(this.getAttribute('href'));
+            if (endElement) {
+              endElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        }
+      });
+      
