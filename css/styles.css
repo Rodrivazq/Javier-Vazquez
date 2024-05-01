@@ -276,7 +276,7 @@
     overflow: hidden;
   }
   #myCarousel .carousel .carousel-item img {
-    width: 100%;
+    width: 50%;
     height: auto;
   }
   .btn-link {
@@ -303,6 +303,24 @@
     background-color: gold; /* Un azul más oscuro para el hover */
     color: black; /* Cambia el color del texto al hacer hover */
     font-size: 1.1rem;
+  }
+  .content-wrapper {
+    grid-column: 1/2;
+    margin-left: 0;
+    align-self: start;
+  }
+  .content-wrapper .image-container, .content-wrapper .text-container {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-top: 0;
+  }
+  .content-wrapper .image-container img, .content-wrapper .text-container img {
+    width: 50%;
+    margin-top: 0;
   }
 }
 .grid-container {
