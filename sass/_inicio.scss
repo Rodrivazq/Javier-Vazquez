@@ -148,7 +148,6 @@
 
 
 @media (max-width: 768px) {
-  /* Estilos base para los títulos 'Javier' y 'Vázquez' */
 .titulo-contenedor {
     display: flex;
     flex-direction: column;
@@ -162,12 +161,6 @@
 
 .titulo-javier, .titulo-vazquez {
     margin-left: 3rem;
-    background-image: linear-gradient(to right, $gold, $blanco, $blanco, $gold);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 8s linear infinite;
 
     &.titulo-javier {
         font-size: 5.5rem;
@@ -182,38 +175,30 @@
     }
 }
 
-/* Estilo para el contenedor principal, ocultando desbordamiento */
+
 .index-cont {
     overflow: hidden;
 }
 
-/* Posicionamiento relativo para un elemento, aquí 'batman' */
+
 .batman {
     position: relative;
     visibility: hidden;
 }
 
-/* Estilo para la imagen dentro del contenedor 'batman', con posicionamiento absoluto */
+
 .batman img {
     overflow: hidden;
 }
 
-/* Estilos para texto adicional, con énfasis en color y subrayado */
+
 .texto-adicional {
     font-size: 1.5rem;
-    font-weight: normal;
-    color: #EEFB03;
-    text-decoration: underline;
     margin-left: 3vw;
-    text-align: center;
     margin-top: -5%;
 }
 
 #myCarousel {
-    grid-column: 2 / 2; // Ocupa la primera columna
-    margin-left: 20%; // Ajuste para alinear correctamente el carrusel
-    width: 100%; // Usa todo el ancho disponible de la columna
-    max-width: 100%; // Limita el ancho máximo al 100%
     margin-top: 0; // Ajusta si es necesario
 
     .carousel {
@@ -240,19 +225,18 @@
     }
 
     .boton-proyectos a.btn {
-        background-color: $amarillo; /* Azul Bootstrap primario, cambia esto por el color que prefieras */
-        color: black; /* Color de texto */
-        border: none; /* Elimina el borde si no lo necesitas */
-        padding: 10px 20px; /* Añade algo de padding para hacer el botón más grande */
-        font-weight: bold; /* Hace el texto más bold */
-        transition: background-color 0.3s, color 0.3s; /* Suaviza la transición de colores */
+        background-color: $amarillo; 
+        color: black; 
+        padding: 10px 20px; 
+        font-weight: bold; 
+        transition: background-color 0.3s, color 0.3s; 
         margin-top: 2rem;
         font-size: 1.5rem;
     }
     
     .boton-proyectos a.btn:hover, .boton-proyectos a.btn:focus {
-        background-color: $gold; /* Un azul más oscuro para el hover */
-        color: black; /* Cambia el color del texto al hacer hover */
+        background-color: $gold; 
+        color: black; 
         font-size: 1.1rem;
     }
 
@@ -278,3 +262,5 @@
     }
 
 }
+
+
