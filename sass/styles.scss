@@ -32,10 +32,9 @@ body {
         }
         
                 /* Titulo páginas*/
-        
                 .titulo-paginas {
                     font-size: 7rem;
-                    color: transparent; // Hace el texto transparente para que el gradiente sea visible
+                    color: transparent;
                     text-align: center;
                     background-image: linear-gradient(to right, gold, white, white, gold ,);
                     background-size: 200% auto;
@@ -45,7 +44,7 @@ body {
                     animation: shine 8s linear infinite;
                     margin-top: 5rem;
                 }
-                
+                /* Efecto de transición*/
                 @keyframes shine {
                     from {
                         background-position: 200% center;
@@ -55,6 +54,7 @@ body {
                     }
                 }
                 
+
         /* Texto debajo de titulos */
         
         .texto-paginas {
@@ -65,59 +65,8 @@ body {
             margin-top: -1.5rem;
         }
         
-        /* Footer: Estilos para el pie de página, asegurando que se mantenga al final y ocupe el ancho completo */
-        footer {
-            margin-top: auto; 
-            width: 100%; 
-        }
-        
-        /* Contenedor dentro del footer para posicionar el texto o contenido adicional */
-        .p-footer {
-            position: relative;
-            z-index: 10;
-        }
-        
-        /* Estilos específicos para el párrafo dentro del contenedor del footer */
-        .p-footer p {
-            font-size: 1rem;
-            margin: 0; 
-        }
-        
-        
-                /*Estilos específicos de cada página*/
             /* Media query para pantallas pequeñas */
             @media screen and (max-width: 768px) {
-        
-                /*inicio*/
-        
-        .batman img {
-            width: 90%;
-        }
-        
-        .logo{
-            display:none
-        }
-        
-                /*Logo*/
-        
-        /* Estilos para el logotipo */
-        .logo {
-            position: relative;
-            margin-top: -3rem;
-            margin-left: -2rem;
-        }
-        .logo img {
-            width: 35%;
-            height: auto;
-            max-width: 100%;
-        }
-        
-        /* Estilos para el contenedor de títulos de las páginas */
-        .contenedor-paginas {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         
         /* Estilos para los títulos y textos de las páginas */
         .titulo-paginas,
@@ -129,117 +78,15 @@ body {
             font-size: 5rem;
             color: white;
         }
-        
-        /* Estilos para el texto debajo de los títulos */
         .texto-paginas {
             font-size: 1.5rem;
             margin-top: -1.5rem;
         }
-        
-        
-        /*Proyectos*/
-        
-        .grid-container {
-            overflow-y: auto;   
-        
-        }
-        
-        .slide img {
-            object-fit: contain; /* Hace que la imagen se ajuste dentro del contenedor sin cortarse */
-            height: auto; /* Ajusta la altura para mantener la proporción */
-            max-height: 50vh; /* Limita la altura de la imagen a un porcentaje de la altura de la ventana */
-        }
-        
-        /*Servicios*/
-        
-        
-                /*Planes*/
-        
-        /* Contenedor para los planes, usando grid para la disposición */
-        .plan-container {
-            display: block;
-            font-size: 1.2rem;
-            justify-content:flex-start;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 0;
-            text-align: left;
-            margin-top: 3rem;
-        }
-        
-        /* Estilos para cada plan individual */
-        .plan {
-            display: grid;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            padding: 1rem;
-            font-size: 2rem;
-            border-right: 1px solid #27ad4f;
-        }
-        
-        /* Botón dentro de cada plan */
-        .plan-button {
-            margin-top: auto;
-            padding: auto;
-            width: auto;
-            display: grid;
-            justify-content: space-around;
-        }
-        
-        /* Efecto al pasar el mouse sobre el botón */
-        .plan-button:hover {
-            background-color: #EEFB03;
-            transition: 0.5s ease;
-        }
-        
-        /* Estilos para el último plan del contenedor */
-        .plan:last-child {
-            border-right: none;
-        }
-        
-        /* Imagen dentro de cada plan */
-        .plan-img {
-            width: 15%;
-            height: auto;
-        }
-        
-        /* Título grande en los planes */
-        .plbs {
-            color: #EEFB03;
-            font-size: 3.5rem;
-            margin-top: -1rem;
-        }
-        
-        /* Texto descriptivo en los planes */
-        .ulp {
-            color: rgb(255, 255, 255);
-            font-size: 1.7rem;
-            text-shadow: 2px 2px 2px #5e5000;
-            text-align: start;
-        }
-        
-        /* Subtítulo o encabezado en los planes */
-        .ph4 {
-            font-size: 1.5em;
-            display: grid;
-            margin-top: auto;
-            color: #7bffa7;
-            align-items: center;
-        }
-        
-                /*Contacto*/
-        
-        /* Estilos base para la sección de contacto */
-        .contacto {
-            margin-top: 3rem;
-        }
-        }
-        
         @media screen and (max-width: 370px) {
-        
             .abrir-menu,
             .cerrar-menu {
             margin-right: 2rem;
             }
         
         }
+    }

@@ -18,3 +18,16 @@
 .slide:hover img {
     transform: scale(1.05); // Efecto zoom sutil al hacer hover
 }
+
+@media screen and (max-width: 768px) {
+.grid-container {
+    overflow-y: auto;   
+
+}
+
+.slide img {
+    object-fit: contain; /* Hace que la imagen se ajuste dentro del contenedor sin cortarse */
+    height: auto; /* Ajusta la altura para mantener la proporción */
+    max-height: 50vh; /* Limita la altura de la imagen a un porcentaje de la altura de la ventana */
+}
+}

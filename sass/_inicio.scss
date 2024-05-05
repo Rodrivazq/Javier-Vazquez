@@ -244,7 +244,6 @@
         grid-column: 1 / 2; // Ocupa la segunda columna
         margin-left: 0; // Elimina cualquier margen izquierdo, no necesario con grid
         align-self: start;
-
         .image-container, .text-container {
             width: 100%; // Ajusta el ancho para llenar la columna
             position: relative;
@@ -253,7 +252,6 @@
             font-style: italic;
             font-family: Georgia, 'Times New Roman', Times, serif;
             margin-top: 0; // Alinea con el inicio de la columna
-
             img {
                 width: 50%; // Ajusta el ancho de la imagen para que llene su contenedor
                 margin-top: 0; // Ajusta el margen superior si es necesario

@@ -46,4 +46,10 @@
             transition: 0.2s ease;
         }
     }
+    @media screen and (max-width: 768px) {
+        /* Estilos base para la sección de contacto */
+        .contacto {
+            margin-top: 3rem;
+        }
+        }
 }
