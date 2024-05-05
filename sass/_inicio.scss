@@ -247,7 +247,7 @@
 
         .image-container, .text-container {
             width: 100%; // Ajusta el ancho para llenar la columna
-            position: absolute;
+            position: relative;
             text-align: center; // Ajusta si es necesario
             font-size: 1.1rem;
             font-style: italic;
