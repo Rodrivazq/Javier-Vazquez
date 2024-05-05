@@ -54,7 +54,7 @@
 /* Estilos para los títulos */
 .titulo-javier, .titulo-vazquez {
   margin-left: 3rem;
-  background-image: linear-gradient(to right, gold, white, white, gold);
+  background-image: linear-gradient(to right, #ffd700, white, white, #ffd700);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -112,7 +112,7 @@
 }
 
 .btn-link:hover .bi-arrow-down-circle-fill {
-  color: gold; /* Nuevo color para el ícono al pasar el ratón por encima */
+  color: #ffd700; /* Nuevo color para el ícono al pasar el ratón por encima */
 }
 
 /* Estilos personalizados para el botón 'Ver todos los proyectos' */
@@ -128,7 +128,7 @@
 }
 
 .boton-proyectos a.btn:hover, .boton-proyectos a.btn:focus {
-  background-color: gold; /* Un azul más oscuro para el hover */
+  background-color: #ffd700; /* Un azul más oscuro para el hover */
   color: black; /* Cambia el color del texto al hacer hover */
   font-size: 2.1rem;
 }
@@ -245,7 +245,7 @@
     font-size: 1.5rem;
   }
   .boton-proyectos a.btn:hover, .boton-proyectos a.btn:focus {
-    background-color: gold;
+    background-color: #ffd700;
     color: black;
     font-size: 1.1rem;
   }
@@ -581,7 +581,7 @@
 }
 
 .footer a:hover {
-  color: gold; /* Cambio de color al pasar el ratón por encima */
+  color: #ffd700; /* Cambio de color al pasar el ratón por encima */
   background-color: transparent; /* Mantiene el fondo transparente en hover */
 }
 
