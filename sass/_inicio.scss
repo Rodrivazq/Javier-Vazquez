@@ -245,7 +245,7 @@
         margin-left: 0; // Elimina cualquier margen izquierdo, no necesario con grid
         align-self: start;
         .image-container, .text-container {
-            width: 100%; // Ajusta el ancho para llenar la columna
+            width: 50%; // Ajusta el ancho para llenar la columna
             position: relative;
             text-align: center; // Ajusta si es necesario
             font-size: 1.1rem;

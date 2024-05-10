@@ -255,7 +255,7 @@
     align-self: start;
   }
   .content-wrapper .image-container, .content-wrapper .text-container {
-    width: 100%;
+    width: 50%;
     position: relative;
     text-align: center;
     font-size: 1.1rem;
@@ -483,10 +483,23 @@
 }
 
 .ulp {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.7rem;
-  text-shadow: 2px 2px 2px #5e5000;
-  text-align: start;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.8;
+  padding: 20px;
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 10px solid gold;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+}
+.ulp:hover {
+  background-color: rgba(0, 225, 255, 0.3);
+  transform: scale(1.05);
 }
 
 .ph4 {

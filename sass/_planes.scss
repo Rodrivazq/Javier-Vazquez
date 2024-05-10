@@ -72,11 +72,27 @@
 }
 
 .ulp {
-    color: $blanco;
-    font-size: 1.7rem;
-    text-shadow: 2px 2px 2px #5e5000;
-    text-align: start;
+    color: rgb(255, 255, 255); // Texto blanco para mejor contraste
+    font-size: 1.7rem; // Tamaño de fuente para mejor legibilidad
+    font-weight: bold; // Negrita para mayor énfasis
+    text-align: center; // Alineación a la izquierda para estructura clara
+    line-height: 1.8; // Espaciado de línea para facilitar la lectura
+    padding: 20px; // Padding para dar espacio y estructura
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.2); // Fondo oscuro para resaltar el texto
+    border: 10px solid gold; // Borde izquierdo en dorado para destacar
+    border-radius: 50px; // Bordes redondeados para un diseño más suave
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Sombra de caja para efecto 3D
+    transition: all 0.3s ease-in-out; // Transición suave para interacciones
+    letter-spacing: 1px;
+
+    &:hover {
+        background-color: rgba(0, 225, 255, 0.3); // Oscurecer fondo al pasar el ratón
+        transform: scale(1.05); // Aumento ligero al pasar el ratón para efecto dinámico
+    }
 }
+
+
 
 .ph4 {
     font-size: 1.6em;
